@@ -13,13 +13,13 @@
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-garden "0.2.8"]]
 
-  :repositories  {"snapshots" {:url "s3p://thinktopic.jars/snapshots/"
-                               :no-auth true
-                               :releases false
-                               :sign-releases false}
-                  "releases" {:url "s3p://thinktopic.jars/releases/"
-                              :no-auth true
-                              :snapshots false
+  :repositories {"snapshots" {:url           "s3p://thinktopic.jars/snapshots/"
+                              :no-auth       true
+                              :releases      false
+                              :sign-releases false}
+                 "releases"  {:url           "s3p://thinktopic.jars/releases/"
+                              :no-auth       true
+                              :snapshots     false
                               :sign-releases false}}
 
   :min-lein-version "2.5.3"
@@ -77,6 +77,4 @@
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
                     :optimizations :none}}]})
-
-
 
